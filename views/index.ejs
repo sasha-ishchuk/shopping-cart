@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Shop</title>
+  </head>
+  <body>
+
+  <%- include('layouts/header')%>
+
+    <% if(session.user_id) { %>
+
+      <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+        <a href="/auth/logout" class="btn btn-dark" style="margin-bottom: 10px">Logout</a>
+        <a href="/cart" class="btn btn-dark">My cart</a>
+      </div>
+
+      <% if(messPayed != '') { %>
+        <h4 class="alert alert-success mt-4" style="width: 250px"><%=  messPayed  %></h4>
+      <% } %>
+
+    <div class="container mt-4">
+      <div class="jumbotron">
+        <% if(user !== '') { %>
+        <h1 class="display-4"><b><i>Welcome in PhoneShop <%=user%>!</i></b></h1>
+        <% } else {%>
+        <h1 class="display-4"><b><i>Welcome in PhoneShop !</i></b></h1>
+          <%}%>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel venenatis enim, vel gravida turpis.</p>
+        <hr class="my-4">
+        <p>Curabitur auctor ante vitae lectus faucibus feugiat. Integer efficitur ornare ultricies. Quisque at iaculis libero.
+          Donec ut tempor nulla. Integer commodo arcu at diam scelerisque, non pellentesque purus ultricies.
+          Sed nec sollicitudin massa. Etiam sit amet ante eu quam venenatis congue.
+          Aenean dignissim arcu eu massa molestie malesuada.</p>
+
+        <p>Cras a ex erat. Suspendisse vestibulum porta vulputate. Sed dictum egestas est vitae bibendum.
+          In rhoncus venenatis ligula, vitae tempor metus tincidunt sed. Sed dignissim, dolor eu malesuada blandit,
+          orci nibh bibendum turpis, non facilisis lectus augue mollis sem. Pellentesque sit amet nisl neque.</p>
+
+        <p>Curabitur auctor ante vitae lectus faucibus feugiat. Integer efficitur ornare ultricies. Quisque at iaculis libero.
+          Donec ut tempor nulla. Integer commodo arcu at diam scelerisque, non pellentesque purus ultricies.
+          Sed nec sollicitudin massa. Etiam sit amet ante eu quam venenatis congue.
+          Aenean dignissim arcu eu massa molestie malesuada.</p>
+        <a class="btn btn-dark btn-lg" href="/shop" role="button">Start Shopping</a>
+      </div>
+    </div>
+
+    <% } else { %>
+
+      <%- include('layouts/non-login')%>
+
+  <%}%>
+
+  <%- include('layouts/footer')%>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </body>
+</html>

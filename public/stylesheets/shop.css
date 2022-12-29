@@ -1,0 +1,29 @@
+.row {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.card {
+    background-color: #e9ecef;
+    display: flex;
+    flex-direction: row;
+    min-width: 350px;
+    max-width: 350px;
+    min-height: 280px;
+    max-height: 280px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+
+
+img {
+    height: 180px;
+    width: 150px;
+}
