@@ -104,7 +104,7 @@ router.get('/cart', (req, res) => {
     });
 });
 
-// register page
+// payment page
 router.get('/payment', (req, res) => {
 
     const messNotPayed = req.flash('messNotPayed');
