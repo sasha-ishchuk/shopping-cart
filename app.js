@@ -1,7 +1,7 @@
 const express = require('express'); //connect express
 const path = require('path');
 
-const mysql = require('mysql'); //connect db
+const mysql = require('mysql2'); //connect db
 const dotenv = require('dotenv');
 
 const session = require("express-session");
