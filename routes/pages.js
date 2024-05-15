@@ -1,6 +1,6 @@
 const express = require('express')
 const bcrypt = require("bcryptjs");
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 const db = mysql.createConnection({
     host: 'localhost',
@@ -36,7 +36,7 @@ router.get('/login', (req, res) => {
 
 // shop page
 router.get('/shop', (req, res) => {
-    let query = `SELECT id, prod_name, description, price, on_stock  FROM products`;
+    let query = `SELECT id, name, description, price, stock  FROM products`;
 
     db.query(query, (error, results) => {
         if (error) {

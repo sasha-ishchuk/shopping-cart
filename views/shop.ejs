@@ -32,10 +32,10 @@
         <%results.forEach(function(row){%>
                 <div class="card">
                     <div class="card-body" style="width: 50%;">
-                        <h5 class="card-title"><%=row.prod_name%></h5>
+                        <h5 class="card-title"><%=row.name%></h5>
                         <p class="card-text"><%=row.description%></p>
                         <p class="card-text">Price (USD): <%=row.price%></p>
-                        <p class="card-text">On stock: <%=row.on_stock%></p>
+                        <p class="card-text">On stock: <%=row.stock%></p>
                         <form action="/cart/add" method="post" style="bottom: 100%">
                             <input type="hidden" name="id" value="<%=row.id%>">
                             <button type="submit" class="btn btn-dark">Add to Cart</button>
