@@ -1,11 +1,25 @@
-<nav class="navbar navbar sticky-top bg-body-tertiary bg-dark" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/" style="color: #ffffff; margin-bottom: 9px"><b>Phone Shop</b></a>
-        <ul>
-            <li><a class="nav-link" href="/">Home</a></li>
-            <li><a class="nav-link" href="/shop">Shopping</a></li>
-            <li><a class="nav-link" href="/login">Login</a></li>
-            <li><a class="nav-link" href="/register">Register</a></li>
-        </ul>
+        <a class="navbar-brand" href="/" style="color: #ffffff; margin-top: 2px"><b>Ecommerce</b></a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+                <li class="nav-item">
+                    <div class="container-fluid">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
