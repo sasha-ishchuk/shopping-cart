@@ -3,10 +3,12 @@
 ## Table of Contents
 - [Project Description](#project-description)
 - [Features](#features)
+- [Used Technologies](#used-technologies)
 - [Prerequisites](#prerequisites)
 - [Setup Instructions](#setup-instructions)
 - [Environment Variables](#environment-variables)
 - [Project Structure](#project-structure)
+- [Application Flow](#application-flow)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Database Schema](#database-schema)
@@ -25,6 +27,18 @@ The Shopping Cart Project is a web application built using Node.js and Express.j
 - Flash Messages for User Feedback
 - Session Management
 
+
+## Used Technologies
+
+This project was built using the following technologies:
+
+- **JavaScript**: The main programming language used for the project.
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Express.js**: A minimal and flexible Node.js web application framework.
+- **MySQL**: A relational database management system used to store and retrieve data.
+- **npm**: A package manager for the JavaScript programming language.
+
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -32,6 +46,7 @@ Before you begin, ensure you have met the following requirements:
 - Node.js installed on your machine
 - MySQL server installed and running
 - A MySQL database created for the project
+
 
 ## Setup Instructions
 
@@ -115,6 +130,7 @@ Before you begin, ensure you have met the following requirements:
 
    The server will start on `http://localhost:3000`.
 
+
 ## Environment Variables
 
 The following environment variables are used in the project:
@@ -128,16 +144,23 @@ The following environment variables are used in the project:
 - `JWT_EXPIRES_IN`: JWT expiration time
 - `JWT_COOKIE_EXPIRES`: JWT cookie expiration time in days
 
+
 ## Project Structure
 
 ```plaintext
 shopping-cart/
+├── additional-data/
+│   ├── db/
+│   │   ├── shop_db.sql
+│   │   ├── shop_db_uml.no_background.png
+│   │   └── shop_db_uml.png
+│   └── wireframe/
+│   │   ├── eccomerce.pdf
+│   │   ├── eccomerce_pages.pdf
+│   │   └── main_page.png
+│   └── user_flow_diagram.png
 ├── bin/
 │   └── www
-├── db/
-│   ├── shop_db.sql
-│   ├── shop_db_uml.no_background.png
-│   └── shop_db_uml.png
 ├── controllers/
 │   ├── auth.js
 │   ├── cart.js
@@ -146,6 +169,8 @@ shopping-cart/
 ├── public/
 │   ├── images/
 │   └── stylesheets/
+│       ├── shop.css
+│       └── style.css
 ├── routes/
 │   ├── auth.js
 │   ├── cart.js
@@ -166,6 +191,13 @@ shopping-cart/
 ├── package-lock.json
 └── README.md
 ```
+
+
+## Application Flow
+
+#### User Flow Diagram
+
+![User Flow Diagram](additional-data/user_flow_diagram.png)
 
 ## Usage
 
@@ -194,6 +226,7 @@ shopping-cart/
 1. Go to `http://localhost:3000/payment`
 2. Follow the payment instructions.
 
+
 ## API Endpoints
 
 ### Authentication
@@ -218,6 +251,7 @@ shopping-cart/
 - `GET /register` - Register page
 - `GET /cart` - Cart page
 - `GET /payment` - Payment page
+
 
 ## Database Schema
 
@@ -262,9 +296,16 @@ CREATE TABLE carts (
 ![Database Schema](additional-data/db/shop_db_uml.png)
 
 
+
 ## Wireframe
 
 #### Main Page Wireframe
-- The full wireframe can be found [here](additional-data/wireframe/Eccommerce-pages.pdf).
+- The full wireframe can be found [here](additional-data/wireframe/eccommerce_pages.pdf).
 
 ![Main Page](additional-data/wireframe/main_page.png)
+
+
+- Wireframe created using [Figma](https://www.figma.com/).
+- Used template from [Figma Community](https://www.figma.com/community/file/966016571279781800).
+- Used template created by [Waverly Lab](https://www.figma.com/@waverlylab).
+
