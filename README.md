@@ -259,8 +259,12 @@ CREATE TABLE carts (
 
 ### DB Tables UML
 
-![Database Schema](db/shop_db_uml.png)
-
+![Database Schema](additional-data/db/shop_db_uml.png)
 
 
 ## Wireframe
+
+#### Main Page Wireframe
+- The full wireframe can be found [here](additional-data/wireframe/Eccommerce-pages.pdf).
+
+![Main Page](additional-data/wireframe/main_page.png)
