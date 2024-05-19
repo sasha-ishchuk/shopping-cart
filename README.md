@@ -300,7 +300,7 @@ CREATE TABLE carts (
 ## Wireframe
 
 #### Main Page Wireframe
-- The full wireframe can be found [here](additional-data/wireframe/eccommerce_pages.pdf).
+- The full wireframe can be found [here](additional-data/wireframe/eccomerce_pages.pdf).
 
 ![Main Page](additional-data/wireframe/main_page.png)
 
